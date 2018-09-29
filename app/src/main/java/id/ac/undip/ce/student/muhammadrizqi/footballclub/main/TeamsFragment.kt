@@ -28,7 +28,7 @@ class TeamsFragment : Fragment(), AnkoComponent<Context>, TeamsView {
     private var teams: MutableList<Team> = mutableListOf()
     private lateinit var presenter: TeamsPresenter
     private lateinit var adapter: TeamsAdapter
-    private lateinit var listTeam: RecyclerView
+    private lateinit var listEvent: RecyclerView
     private lateinit var progressBar: ProgressBar
     private lateinit var swipeRefresh: SwipeRefreshLayout
     private lateinit var spinner: Spinner
@@ -44,7 +44,7 @@ class TeamsFragment : Fragment(), AnkoComponent<Context>, TeamsView {
         adapter = TeamsAdapter(teams){
             ctx.startActivity<TeamDetailActivity>("id" to "${it.teamId}")
         }
-        listTeam.adapter = adapter
+        listEvent.adapter = adapter
 
         val request = ApiRepository()
         val gson = Gson()
@@ -58,9 +58,7 @@ class TeamsFragment : Fragment(), AnkoComponent<Context>, TeamsView {
                 presenter.getteamList(leagueName)
             }
 
-            override fun onNothingSelected(parent: AdapterView<*>) {
-
-            }
+            override fun onNothingSelected(parent: AdapterView<*>) { }
         }
 
         swipeRefresh.onRefresh {
@@ -93,8 +91,8 @@ class TeamsFragment : Fragment(), AnkoComponent<Context>, TeamsView {
                 relativeLayout {
                     lparams(width = matchParent, height = wrapContent)
 
-                    listTeam = recyclerView {
-                        id = R.id.listEvent
+                    listEvent = recyclerView {
+                        id = R.id.list_team
                         lparams(width = matchParent, height = wrapContent)
                         layoutManager = LinearLayoutManager(ctx)
                     }
@@ -107,11 +105,6 @@ class TeamsFragment : Fragment(), AnkoComponent<Context>, TeamsView {
             }
         }
     }
-
-
-
-
-
 
         override fun showLoading() {
             progressBar.visible()

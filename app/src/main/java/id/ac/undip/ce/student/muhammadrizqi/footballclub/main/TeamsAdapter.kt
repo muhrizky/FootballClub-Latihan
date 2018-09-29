@@ -15,6 +15,7 @@ import org.jetbrains.anko.sdk25.coroutines.onClick
 
 class TeamsAdapter (private val teams: List<Team>, private val listener: (Team)-> Unit)
     : RecyclerView.Adapter<TeamViewHolder>(){
+
     override fun onBindViewHolder(holder: TeamViewHolder, position: Int) {
         holder.bindItem(teams[position], listener)
     }
@@ -40,8 +41,8 @@ class TeamsAdapter (private val teams: List<Team>, private val listener: (Team)-
                     imageView {
                         id = team_badge
                     }.lparams {
-                        height =dip(50)
-                        width=dip(50)
+                        height = dip(50)
+                        width= dip(50)
                     }
                     textView {
                         id = team_name

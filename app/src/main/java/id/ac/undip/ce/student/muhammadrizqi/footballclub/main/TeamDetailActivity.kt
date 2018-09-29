@@ -111,7 +111,6 @@ class TeamDetailActivity : AppCompatActivity(), TeamDetailView {
                 }
             }
         }
-
         favoriteState()
         val request = ApiRepository()
         val gson = Gson()

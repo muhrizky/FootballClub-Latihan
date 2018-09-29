@@ -4,6 +4,6 @@ import id.ac.undip.ce.student.muhammadrizqi.footballclub.model.Team
 
 interface TeamsView {
     fun showLoading()
-    fun  hideLoading()
+    fun hideLoading()
     fun showTeamList(data: List<Team>)
 }
