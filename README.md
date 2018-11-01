@@ -1,5 +1,5 @@
 # Tentang Aplikasi
-Aplikasi yang Menampilkan team-team berdsarkan liga dengan mengambil data API dari https://www.thesportsdb.com
+FootballClub-Latihan merupakan aplikasi yang Menampilkan team-team berdsarkan liga dengan mengambil data API dari https://www.thesportsdb.com
 Fitur yang ada pada aplikasi ini yaitu :
 * Menampilkan 15 jadwal pertandingan, baik yang terakhir maupun yang mendatang berdasarkan League ID. 
 * Menampilkan detail pertandingan dari jadwal yang dipilih.
