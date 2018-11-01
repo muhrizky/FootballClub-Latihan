@@ -6,5 +6,7 @@ Fitur yang ada pada aplikasi ini yaitu :
 * Di dalam halaman detail pertandingan, menampilkan logo dari masing-masing tim.
 * Menyimpan jadwal pertandingan ke halaman Favorite.
 * Menghapus jadwal pertandingan dari halaman Favorite.
+
+Testing
 * Menerapkan unit tests pada beberapa fungsi, misalnya fungsi untuk request data ke server.
 * Menerapkan instrumentation tests dengan skenario sesuai behaviour pada aplikasi.
